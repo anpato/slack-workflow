@@ -1,0 +1,6 @@
+name: "Slack Notify"
+run-name: "${{ github.actor }} has created a ${{ github.ref }}"
+on:
+  push:
+    branches:
+      - "release/*"
