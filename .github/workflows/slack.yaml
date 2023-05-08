@@ -1,6 +1,10 @@
 name: "Slack Notify"
 run-name: "${{ github.actor }} has created a ${{ github.ref }}"
 on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
   create:
     branches:
       - "release/**"
